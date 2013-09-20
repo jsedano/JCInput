@@ -17,7 +17,6 @@
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
-        NSLog(@"wifth %f, height %f",size.width,size.height);
         self.joystick = [[JCJoystick alloc] initWithControlRadius:40 baseRadius:45 baseColor:[SKColor blueColor] joystickRadius:25 joystickColor:[SKColor redColor]];
         [self.joystick setPosition:CGPointMake(70,70)];
         [self addChild:self.joystick];
