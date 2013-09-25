@@ -12,8 +12,8 @@
 @interface JCButton()
 @property (nonatomic,strong) UITouch *onlyTouch;
 @property float buttonRadius;
-@property SKColor *onColor;
-@property SKColor *offColor;
+@property SKColor *color;
+@property SKColor *pressedColor;
 @property BOOL wasRead;
 @property BOOL isOn;
 @property BOOL isTurbo;
@@ -23,16 +23,15 @@
 @implementation JCButton
 
 -(id)initWithButtonRadius:(float)buttonRadious
-                  onColor:(SKColor *)onColor
-                 offColor:(SKColor *)offColor
+                    color:(SKColor *)color
+             pressedColor:(SKColor *)pressedColor
                   isTurbo:(BOOL)isTurbo
 
 {
     if((self = [super init]))
     {
-        NSLog(@"??");
-        self.onColor = onColor;
-        self.offColor = offColor;
+        self.color = color;
+        self.pressedColor = pressedColor;
         self.onlyTouch = nil;
         self.buttonRadius = buttonRadious;
         self.isTurbo = isTurbo;
@@ -42,7 +41,7 @@
         CGMutablePathRef circlePath = CGPathCreateMutable();
         CGPathAddEllipseInRect(circlePath , NULL , CGRectMake(self.position.x-self.buttonRadius, self.position.y-self.buttonRadius, self.buttonRadius*2, self.buttonRadius*2) );
         self.path = circlePath;
-        self.fillColor =  self.onColor;
+        self.fillColor =  self.color;
         self.lineWidth=0;
         CGPathRelease( circlePath );
     }
@@ -57,6 +56,7 @@
         self.onlyTouch = [touches anyObject];
         self.isOn = YES;
         self.wasRead = NO;
+        self.fillColor = self.pressedColor;
     }
 }
 
@@ -74,6 +74,7 @@
                 self.isOn = NO;
             }
         }
+        self.fillColor = self.color;
     }
 }
 
@@ -84,6 +85,7 @@
         if (self.wasRead) {
             self.isOn = NO;
         }
+        self.fillColor = self.color;
         self.onlyTouch = nil;
     }
     
@@ -93,6 +95,7 @@
 {
     [super touchesCancelled:touches withEvent:event];
     if ([[touches allObjects] containsObject:self.onlyTouch]) {
+        self.fillColor = self.color;
         self.onlyTouch = nil;
     }
 }

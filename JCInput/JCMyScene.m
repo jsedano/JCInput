@@ -26,12 +26,12 @@
         [self addChild:self.joystick];
         //JCButton
         
-        self.normalButton = [[JCButton alloc] initWithButtonRadius:25 onColor:[SKColor greenColor] offColor:[SKColor blackColor] isTurbo:NO];
+        self.normalButton = [[JCButton alloc] initWithButtonRadius:25 color:[SKColor greenColor] pressedColor:[SKColor blackColor] isTurbo:NO];
         [self.normalButton setPosition:CGPointMake(size.width - 40,95)];
         [self addChild:self.normalButton];
         
         
-        self.turboButton = [[JCButton alloc] initWithButtonRadius:25 onColor:[SKColor yellowColor] offColor:[SKColor blackColor] isTurbo:YES];
+        self.turboButton = [[JCButton alloc] initWithButtonRadius:25 color:[SKColor yellowColor] pressedColor:[SKColor blackColor] isTurbo:YES];
         [self.turboButton setPosition:CGPointMake(size.width - 85,50)];
         [self addChild:self.turboButton];
         

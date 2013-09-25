@@ -14,8 +14,8 @@
     
 }
 -(id)initWithButtonRadius:(float)buttonRadious
-                  onColor:(SKColor *)onColor
-                  offColor:(SKColor *)offColor
+                  color:(SKColor *)color
+                  pressedColor:(SKColor *)pressedColor
                   isTurbo:(BOOL)isTurbo;
 -(BOOL)wasPressed;
 @end
