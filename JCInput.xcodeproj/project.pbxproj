@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BAFC97617F2A2F800A6281E /* JCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAFC97517F2A2F800A6281E /* JCButton.m */; };
 		6BC8AD6A17EBF85400F39AEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC8AD6917EBF85400F39AEB /* Foundation.framework */; };
 		6BC8AD6C17EBF85400F39AEB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC8AD6B17EBF85400F39AEB /* CoreGraphics.framework */; };
 		6BC8AD6E17EBF85400F39AEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC8AD6D17EBF85400F39AEB /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6BAFC97417F2A2F800A6281E /* JCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCButton.h; sourceTree = "<group>"; };
+		6BAFC97517F2A2F800A6281E /* JCButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCButton.m; sourceTree = "<group>"; };
 		6BC8AD6617EBF85400F39AEB /* JCInput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCInput.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC8AD6917EBF85400F39AEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6BC8AD6B17EBF85400F39AEB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -92,6 +95,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6BAFC97717F2B7F900A6281E /* JCInput */ = {
+			isa = PBXGroup;
+			children = (
+				6BAFC97417F2A2F800A6281E /* JCButton.h */,
+				6BAFC97517F2A2F800A6281E /* JCButton.m */,
+				6BC8ADAA17EBF88400F39AEB /* JCJoystick.h */,
+				6BC8ADAB17EBF88400F39AEB /* JCJoystick.m */,
+			);
+			name = JCInput;
+			sourceTree = "<group>";
+		};
 		6BC8AD5D17EBF85400F39AEB = {
 			isa = PBXGroup;
 			children = (
@@ -126,8 +140,7 @@
 		6BC8AD7117EBF85400F39AEB /* JCInput */ = {
 			isa = PBXGroup;
 			children = (
-				6BC8ADAA17EBF88400F39AEB /* JCJoystick.h */,
-				6BC8ADAB17EBF88400F39AEB /* JCJoystick.m */,
+				6BAFC97717F2B7F900A6281E /* JCInput */,
 				6BC8AD7A17EBF85400F39AEB /* JCAppDelegate.h */,
 				6BC8AD7B17EBF85400F39AEB /* JCAppDelegate.m */,
 				6BC8AD7D17EBF85400F39AEB /* Main_iPhone.storyboard */,
@@ -272,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BAFC97617F2A2F800A6281E /* JCButton.m in Sources */,
 				6BC8AD7817EBF85400F39AEB /* main.m in Sources */,
 				6BC8AD8517EBF85400F39AEB /* JCViewController.m in Sources */,
 				6BC8ADAD17EBF88400F39AEB /* JCJoystick.m in Sources */,
@@ -497,6 +511,7 @@
 				6BC8ADA417EBF85400F39AEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6BC8ADA517EBF85400F39AEB /* Build configuration list for PBXNativeTarget "JCInputTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +520,7 @@
 				6BC8ADA717EBF85400F39AEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

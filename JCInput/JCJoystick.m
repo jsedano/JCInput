@@ -23,10 +23,10 @@
 @implementation JCJoystick
 
 -(id)initWithControlRadius:(float)controlRadious
-              baseRadius:(float)baseRadius
-               baseColor:(SKColor *)baseColor
-          joystickRadius:(float)joystickRadius
-           joystickColor:(SKColor *)joystickColor
+                baseRadius:(float)baseRadius
+                 baseColor:(SKColor *)baseColor
+            joystickRadius:(float)joystickRadius
+             joystickColor:(SKColor *)joystickColor
 
 {
     if((self = [super init]))
