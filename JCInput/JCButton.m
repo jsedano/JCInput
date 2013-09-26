@@ -10,14 +10,13 @@
 #import "JCJoystick.h"
 #import "Math.h"
 @interface JCButton()
-@property (nonatomic,strong) UITouch *onlyTouch;
-@property float buttonRadius;
-@property SKColor *color;
-@property SKColor *pressedColor;
-@property BOOL wasRead;
-@property BOOL isOn;
-@property BOOL isTurbo;
-
+    @property (nonatomic,strong) UITouch *onlyTouch;
+    @property float buttonRadius;
+    @property SKColor *color;
+    @property SKColor *pressedColor;
+    @property BOOL wasRead;
+    @property BOOL isOn;
+    @property BOOL isTurbo;
 @end
 
 @implementation JCButton
@@ -97,6 +96,9 @@
     if ([[touches allObjects] containsObject:self.onlyTouch]) {
         self.fillColor = self.color;
         self.onlyTouch = nil;
+        self.isOn = NO;
+        self.wasRead = YES;
+        
     }
 }
 
