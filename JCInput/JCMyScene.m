@@ -8,12 +8,17 @@
 
 #import "JCMyScene.h"
 #import "JCJoystick.h"
+#import "JCImageJoystick.h"
 #import "JCButton.h"
 @interface JCMyScene()
     @property (strong, nonatomic) JCJoystick *joystick;
     @property (strong, nonatomic) JCButton *normalButton;
     @property (strong, nonatomic) JCButton *turboButton;
-    @property SKLabelNode *myLabel;
+    @property SKLabelNode *myLabel1;
+    @property SKLabelNode *myLabel2;
+    @property (strong, nonatomic) JCImageJoystick *imageJoystick;
+
+
 @end
 
 @implementation JCMyScene
@@ -24,6 +29,13 @@
         self.joystick = [[JCJoystick alloc] initWithControlRadius:40 baseRadius:45 baseColor:[SKColor blueColor] joystickRadius:25 joystickColor:[SKColor redColor]];
         [self.joystick setPosition:CGPointMake(70,70)];
         [self addChild:self.joystick];
+        
+        
+        //JCImageJoystic
+        self.imageJoystick = [[JCImageJoystick alloc]initWithJoystickImage:(@"redStick.png") baseImage:@"stickbase.png"];
+        [self.imageJoystick setPosition:CGPointMake(80, 200)];
+        [self addChild:self.imageJoystick];
+        
         //JCButton
         
         self.normalButton = [[JCButton alloc] initWithButtonRadius:25 color:[SKColor greenColor] pressedColor:[SKColor blackColor] isTurbo:NO];
@@ -49,14 +61,23 @@
         
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
-        self.myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+        self.myLabel1 = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         
-        self.myLabel.text = @"Hello, World!";
-        self.myLabel.fontSize = 30;
-        self.myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
+        self.myLabel1.text = @"Hello";
+        self.myLabel1.fontSize = 30;
+        self.myLabel1.position = CGPointMake(CGRectGetMidX(self.frame)*0.5,
                                        CGRectGetMidY(self.frame));
         
-        [self addChild:self.myLabel];
+        [self addChild:self.myLabel1];
+        
+        self.myLabel2 = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+        
+        self.myLabel2.text = @"World";
+        self.myLabel2.fontSize = 30;
+        self.myLabel2.position = CGPointMake(CGRectGetMidX(self.frame)*1.5,
+                                            CGRectGetMidY(self.frame));
+        
+        [self addChild:self.myLabel2];
         
         
     }
@@ -64,8 +85,10 @@
 }
 
 -(void)update:(CFTimeInterval)currentTime {
-    [self.myLabel setPosition:CGPointMake(self.myLabel.position.x+self.joystick.x, self.myLabel.position.y+self.joystick.y)];
+    [self.myLabel1 setPosition:CGPointMake(self.myLabel1.position.x+self.joystick.x, self.myLabel1.position.y+self.joystick.y)];
     
+    
+    [self.myLabel2 setPosition:CGPointMake(self.myLabel2.position.x+self.imageJoystick.x, self.myLabel2.position.y+self.imageJoystick.y)];
 
     /* Called before each frame is rendered */
 }

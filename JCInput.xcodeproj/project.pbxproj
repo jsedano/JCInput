@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B71F54218AB387E00CC1A7B /* redStick.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B71F54118AB387E00CC1A7B /* redStick.png */; };
+		6B71F54518AB38DA00CC1A7B /* JCImageJoystick.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B71F54418AB38DA00CC1A7B /* JCImageJoystick.m */; };
+		6B71F54718AB3B2300CC1A7B /* stickbase.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B71F54618AB3B2300CC1A7B /* stickbase.png */; };
 		6BAFC97617F2A2F800A6281E /* JCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAFC97517F2A2F800A6281E /* JCButton.m */; };
 		6BC8AD6A17EBF85400F39AEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC8AD6917EBF85400F39AEB /* Foundation.framework */; };
 		6BC8AD6C17EBF85400F39AEB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC8AD6B17EBF85400F39AEB /* CoreGraphics.framework */; };
@@ -40,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B71F54118AB387E00CC1A7B /* redStick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redStick.png; sourceTree = "<group>"; };
+		6B71F54318AB38DA00CC1A7B /* JCImageJoystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCImageJoystick.h; sourceTree = "<group>"; };
+		6B71F54418AB38DA00CC1A7B /* JCImageJoystick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCImageJoystick.m; sourceTree = "<group>"; };
+		6B71F54618AB3B2300CC1A7B /* stickbase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stickbase.png; sourceTree = "<group>"; };
 		6BAFC97417F2A2F800A6281E /* JCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCButton.h; sourceTree = "<group>"; };
 		6BAFC97517F2A2F800A6281E /* JCButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCButton.m; sourceTree = "<group>"; };
 		6BC8AD6617EBF85400F39AEB /* JCInput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCInput.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +109,8 @@
 				6BAFC97517F2A2F800A6281E /* JCButton.m */,
 				6BC8ADAA17EBF88400F39AEB /* JCJoystick.h */,
 				6BC8ADAB17EBF88400F39AEB /* JCJoystick.m */,
+				6B71F54318AB38DA00CC1A7B /* JCImageJoystick.h */,
+				6B71F54418AB38DA00CC1A7B /* JCImageJoystick.m */,
 			);
 			name = JCInput;
 			sourceTree = "<group>";
@@ -150,6 +159,8 @@
 				6BC8AD8617EBF85400F39AEB /* JCMyScene.h */,
 				6BC8AD8717EBF85400F39AEB /* JCMyScene.m */,
 				6BC8AD8917EBF85400F39AEB /* Spaceship.png */,
+				6B71F54118AB387E00CC1A7B /* redStick.png */,
+				6B71F54618AB3B2300CC1A7B /* stickbase.png */,
 				6BC8AD8B17EBF85400F39AEB /* Images.xcassets */,
 				6BC8AD7217EBF85400F39AEB /* Supporting Files */,
 			);
@@ -262,8 +273,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B71F54718AB3B2300CC1A7B /* stickbase.png in Resources */,
 				6BC8AD8A17EBF85400F39AEB /* Spaceship.png in Resources */,
 				6BC8AD8C17EBF85400F39AEB /* Images.xcassets in Resources */,
+				6B71F54218AB387E00CC1A7B /* redStick.png in Resources */,
 				6BC8AD8217EBF85400F39AEB /* Main_iPad.storyboard in Resources */,
 				6BC8AD7F17EBF85400F39AEB /* Main_iPhone.storyboard in Resources */,
 				6BC8AD7617EBF85400F39AEB /* InfoPlist.strings in Resources */,
@@ -290,6 +303,7 @@
 				6BC8AD8517EBF85400F39AEB /* JCViewController.m in Sources */,
 				6BC8ADAD17EBF88400F39AEB /* JCJoystick.m in Sources */,
 				6BC8AD7C17EBF85400F39AEB /* JCAppDelegate.m in Sources */,
+				6B71F54518AB38DA00CC1A7B /* JCImageJoystick.m in Sources */,
 				6BC8AD8817EBF85400F39AEB /* JCMyScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
